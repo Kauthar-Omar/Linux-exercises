@@ -109,7 +109,7 @@ bash speciesfinder.sh | sort | uniq -c
 15. Write a loop in Bash producing all the integers from 1 to 30, one per line?
 
 ```bash
-for int in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+for int in {1..30}
 do
 echo $int
 done
@@ -118,7 +118,7 @@ done
 16.  Create at once 20 files called "trial1" to "trial20" and *then* rename them all by appending the suffix ".data". Of course, don't issue 20 commands, but just one.
 
 ```bash
-for files in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+for files in {1..20}
 do
 touch trial$files.data
 done
