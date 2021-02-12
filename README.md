@@ -6,9 +6,9 @@ This repo is to a platform where I put down the answers to my attempted question
 1. How many processes are currently running on your system? Use ps and wc, the first line of output of ps is not a process!
 
 ```bash
-ps | wc -l 
+ps | expr $(wc -l) - 1 
 ```
-nb: still figuring out to remove one line to get correct answer.
+NB: still trying the code not final answer.
 
 2. Write a script that upon invocation shows the time and date, lists all logged-in users, and gives the system uptime. The script then saves this information to a logfile.
 
@@ -124,7 +124,7 @@ touch trial$files.data
 done
 ```
 
-17.  Try this with the command "expr 1 / 0", whose purpose is to calculate the integer result of 1 divided by 0. What happens? 
+17.  Try this with the command "echo errors 2> standarderrors.log", whose purpose is to calculate the integer result of 1 divided by 0. What happens? 
 
 Prints output : 
 
@@ -132,8 +132,33 @@ expr: division by zero
 
 Why?
 
+bash doesn't have a way to trap divisions by zero but can divide by other integers.
+
 18. How can you separately redirect the standard output and the standard error streams into two separate files?
 
+```bash
+echo output 1> standardoutput.log
+echo errors 2> standarderrors.log
+```
+
+19. Write a Bash script asking "What's your name?", then waiting for you (the user) to enter you name and press Enter , following what the program displays some text according to the following pattern:
+(
+"Good morning/day/evening, your_name!
+It's now current_time on this lovely day of current_day." and it exits.
+For instance, the message written by your program would be:
+Good day Emmanuel! It's not 12:57EAT on this lovely day of July 20. 1:00
+or 'Good morning" in the morning hours, or "Good evening" in the evening hours, depending on the current time.
+Of course there will be at least an if or a case construct in your script.
+
+```bash
+
+```
+
+20. Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?
+
+```bash
+cd ../../Fun_stuff/
+```
 
 
 
