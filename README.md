@@ -1,7 +1,7 @@
 # Linux-exercises
 This repo is a platform where I put down the answers to my attempted questions from a linux exercise shared on slack.
 
-## Below are the queations attempted
+## Below are the questions attempted
 
 1. How many processes are currently running on your system? Use ps and wc, the first line of output of ps is not a process!
 
