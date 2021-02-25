@@ -120,7 +120,8 @@ done
 ```bash
 for files in {1..20}
 do
-touch trial$files.data
+touch trial$files
+mv trial$files trial$files.data
 done
 ```
 
@@ -150,9 +151,31 @@ Good day Emmanuel! It's not 12:57EAT on this lovely day of July 20. 1:00
 or 'Good morning" in the morning hours, or "Good evening" in the evening hours, depending on the current time.
 Of course there will be at least an if or a case construct in your script.
 
+below is the bash script greetings.sh
+
 ```bash
+echo " Please input your name"
+read name
+
+date=$(date +%H)
+time=$(date +%T)
+day=$(date +%D)
+
+if [ $date -lt "12" ]
+then
+echo "Good Morning ${name}"
+echo "It's now $time on this lovely day of $day."
+elif [[ $date -gt "12" && $date -lt "16" ]]
+then
+echo "Good Afternoon ${name}"
+echo "It's now $time on this lovely day of $day."
+else
+echo "Good Evening ${name}"
+echo "It's now $time on this lovely day of $day."
+fi
 
 ```
+
 
 20. Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?
 
