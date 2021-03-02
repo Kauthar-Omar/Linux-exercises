@@ -91,6 +91,8 @@ grep "^>" test.fa
 
 13. Can you write a very short script (possibly one single commandline) to extract from the same file the species names?
 
+script is speciesfinder.sh
+
 ```bash
 grep ">" test.fa | sort > species.txt && sed -i "s/PREDICTED: //g" species.txt && cut -d " " -f 2,3 species.txt
 ```
