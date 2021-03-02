@@ -1,4 +1,4 @@
-
+#! /usr/bin/env bash
 echo " Please input your name"
 read name
 
