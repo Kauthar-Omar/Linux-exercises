@@ -26,3 +26,5 @@ A little explanation:
 - The option -F”\t” tells AWK that the delimiter is tab, which is generally represented as \t on the command line.
 - Each delimited column is represented by a $ symbol followed by a number. The number represents the column number so $1 is column1, $2 is column 2 etc. $0 prints the whole line.
 - For each line of the file, AWK will do whatever command is contained in the curly brackets. In this case, we are asking it to print the value in the first column.
+
+For more on functionalities of AWK visit [link](https://www.futurelearn.com/courses/linux-for-bioinformatics/1/steps/1037260)
